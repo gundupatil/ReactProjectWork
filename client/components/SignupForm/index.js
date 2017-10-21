@@ -78,7 +78,6 @@ class SignupForm extends React.Component {
 
      return (
      <form onSubmit={this.onSubmit}>
-        <h1>Join our community!</h1>
         <Grid>
             <Row center="xs">
             <Col xs={12} sm={6} md={6} lg={6}>

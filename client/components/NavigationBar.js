@@ -1,7 +1,5 @@
 import React from 'react';
 import{Link} from 'react-router';
-//import RaisedButton from 'material-ui/RaisedButton';
-import {RaisedButton} from 'material-ui';
 
 
 export default()=>{
@@ -20,7 +18,6 @@ export default()=>{
           </div>
         </div>
       </nav>
-      <RaisedButton label="Default" />
       </div>
     );
 }

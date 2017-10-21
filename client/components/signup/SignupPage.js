@@ -11,7 +11,7 @@ class SignupPage extends React.Component {
         <div>
             <h1>Sign up Page</h1>
                 
-                        <SignupForm userSignupRequest={userSignupRequest} addFlashMessage={addFlashMessage}/>
+                <SignupForm userSignupRequest={userSignupRequest} addFlashMessage={addFlashMessage}/>
                     
         </div>
         );
