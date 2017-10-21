@@ -9,7 +9,7 @@ import TextField from 'material-ui/TextField';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
-
+import styles from './styles.css';
 const style = {
   margin: 12,
 };
@@ -77,72 +77,6 @@ class SignupForm extends React.Component {
    
 
      return (
-    //   <form onSubmit={this.onSubmit}>
-    //     <h1>Join our community!</h1>
-
-    //     <div className={classnames("form-group",{'has-error':errors.username})}>
-    //       <label className="control-label">UserName</label>
-    //       <input
-    //             value={this.state.username} 
-    //             onChange = {this.onChange}
-    //             type="text"
-    //             name="username"
-    //             className="form-control"           
-    //         />
-           
-    //        {errors.username && <span className="help-block">{errors.username}</span>}
-    //     </div>
-    //     <div className={classnames("form-group",{'has-error':errors.timezone})}>
-
-    //       <label className="control-label">Timezone</label>
-    //       <select
-    //         className="form-control"
-    //         name="timezone"
-    //         onChange={this.onChange}
-    //         value={this.state.timezone}
-    //       >
-    //         <option value="" disabled>Choose Your Timezone</option>
-    //         {options}
-    //       </select>
-    //       {errors.username && <span className="help-block">{errors.username}</span>}
-    //     </div>
-    //     <div className={classnames("form-group",{'has-error':errors.email})}>
-  
-        
-    //         <label className="control-label">Email</label>
-    //         <input
-    //             value={this.state.email} 
-    //             onChange = {this.onChange}
-    //             type="text"
-    //             name="email"
-    //             className="form-control"           
-    //         />
-    //         {errors.email && <span className="help-block">{errors.email}</span>}
-    //     </div>
-    //     <div className={classnames("form-group",{'has-error':errors.password})}>
-    
-    //         <label className="control-label">Password</label>
-    //         <input
-    //             value={this.state.password} 
-    //             onChange = {this.onChange}
-    //             type="password"
-    //             name="password"
-    //             className="form-control"           
-    //         />
-    //         {errors.password && <span className="help-block">{errors.password}</span>}
-    //     </div>
-    //     <div className={classnames("form-group",{'has-error':errors.passwordConfirmation})}>
-    
-    //         <label className="control-label">Password Confiramation</label>
-    //         <input
-    //             value={this.state.passwordConfirmation} 
-    //             onChange = {this.onChange}
-    //             type="password"
-    //             name="passwordConfirmation"
-    //             className="form-control"           
-    //         />
-    //         {errors.passwordConfirmation && <span className="help-block">{errors.passwordConfirmation}</span>}
-    //     </div>
      <form onSubmit={this.onSubmit}>
         <h1>Join our community!</h1>
         <Grid>
@@ -191,26 +125,11 @@ class SignupForm extends React.Component {
                 field="passwordConfirmation"
                 type="password"
                 />
-                
-            
-                {/*<div className={classnames("form-group", { 'has-error': errors.timezone })}>
-                <label className="control-label">Timezone</label>
-                <select
-                    className="form-control"
-                    name="timezone"
-                    onChange={this.onChange}
-                    value={this.state.timezone}
-                >
-                    <option value="" disabled>Choose Your Timezone</option>
-                    {options}
-                </select>
-                {errors.timezone && <span className="help-block">{errors.timezone}</span>}
-                </div>*/}
                 </Col>
                 </Row>
                 <Row center="xs">
                     <Col>
-                <div class="button">
+                <div className={styles.button}>
                         
                     <RaisedButton disabled={this.state.isLoading} label="Create" primary={true} style={style} />
                      <FlatButton label="Cancel" />

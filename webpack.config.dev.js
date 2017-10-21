@@ -19,16 +19,30 @@ export default {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.js$/, 
         include: [
           path.join(__dirname, 'client'),
           path.join(__dirname, 'server/shared')
         ],
         loaders: [ 'react-hot', 'babel' ]
-      }
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader?modules',
+        include: /flexboxgrid/
+      },
+      {
+      test: /\.css$/,
+      loaders: ["style-loader","css-loader"],
+      exclude:/flexboxgrid/
+    }
     ]
   },
+  node: {
+   fs: "empty"
+},
+
   resolve: {
-    extentions: [ '', '.js' ]
+    extentions: [ '', '.js','json' ]
   }
 }

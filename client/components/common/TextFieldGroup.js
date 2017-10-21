@@ -1,17 +1,20 @@
 import React from 'react';
 import classnames from 'classnames';
+import TextField from 'material-ui/TextField';
+
 
 const TextFieldGroup = ({ field, value, label, error, type, onChange }) => {
   return (
-    <div className={classnames('form-group', { 'has-error': error })}>
-      <label className="control-label">{label}</label>
-      <input
+    <div>
+      
+      <TextField
+        floatingLabelText={label}
         onChange={onChange}
         //onBlur={checkUserExists}
         value={value}
         type={type}
         name={field}
-        className="form-control"
+        
       />
     {error && <span className="help-block">{error}</span>}
     </div>
